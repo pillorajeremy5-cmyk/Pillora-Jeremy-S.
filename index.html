@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jeremy Solis Pillora | Personal Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+            scroll-behavior: smooth;
+
+        }
+
+        body {
+
+            font-family: 'Poppins', sans-serif;
+
+            background: #0b1120;
+
+            color: #f8fafc;
+
+        }
+
+        :root {
+
+            --main: #38bdf8;
+
+            --secondary: #818cf8;
+
+            --dark: #0b1120;
+
+            --card: #111c30;
+
+            --text: #cbd5e1;
+
+        }
+
+        header {
+
+            position: fixed;
+
+            top: 0;
+
+            width: 100%;
+
+            z-index: 1000;
+
+            background: rgba(11, 17, 32, 0.95);
+
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+
+            backdrop-filter: blur(12px);
+
+        }
+
+        nav {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding: 20px 6%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+        }
+
+        .logo {
+
+            font-size: 25px;
+
+            font-weight: 800;
+
+            color: var(--main);
+
+        }
+
+        nav ul {
+
+            display: flex;
+
+            list-style: none;
+
+            gap: 25px;
+
+        }
+
+        nav a {
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            transition: 0.3s;
+
+        }
+
+        nav a:hover {
+
+            color: var(--main);
+
+        }
+
+        .hero {
+
+            min-height: 100vh;
+
+            padding: 130px 8% 80px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 60px;
+
+            max-width: 1300px;
+
+            margin: auto;
+
+        }
+
+        .hero-text {
+
+            flex: 1;
+
+        }
+
+        .tag {
+
+            color: var(--main);
+
+            font-size: 13px;
+
+            letter-spacing: 4px;
+
+            font-weight: 600;
+
+            margin-bottom: 20px;
+
+        }
+
+        .hero h1 {
+
+            font-size: clamp(38px, 5vw, 65px);
+
+            line-height: 1.2;
+
+            margin-bottom: 15px;
+
+        }
+
+        .hero h1 span {
+
+            color: var(--main);
+
+        }
+
+        .hero h2 {
+
+            font-size: 23px;
+
+            color: #cbd5e1;
+
+            margin-bottom: 20px;
+
+            font-weight: 500;
+
+        }
+
+        .hero p {
+
+            color: var(--text);
+
+            line-height: 1.9;
+
+            max-width: 570px;
+
+            font-size: 14px;
+
+            margin-bottom: 30px;
+
+        }
+
+        .buttons {
+
+            display: flex;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+
+        }
+
+        .btn {
+
+            display: inline-block;
+
+            padding: 13px 25px;
+
+            border-radius: 8px;
+
+            background: var(--main);
+
+            color: #07111f;
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            transition: 0.3s;
+
+        }
+
+        .btn:hover {
+
+            transform: translateY(-4px);
+
+            box-shadow: 0 8px 25px rgba(56,189,248,0.25);
+
+        }
+
+        .btn-outline {
+
+            background: transparent;
+
+            color: white;
+
+            border: 1px solid var(--main);
+
+        }
+
+        .hero-image {
+
+            flex: 0 0 350px;
+
+            display: flex;
+
+            justify-content: center;
+
+        }
+
+        .image-frame {
+
+            width: 320px;
+
+            height: 390px;
+
+            border-radius: 180px 180px 30px 30px;
+
+            padding: 8px;
+
+            background: linear-gradient(135deg, var(--main), var(--secondary));
+
+            box-shadow: 0 0 60px rgba(56,189,248,0.15);
+
+            overflow: hidden;
+
+        }
+
+        .image-frame img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            border-radius: 175px 175px 25px 25px;
+
+        }
+
+        section.content-section {
+
+            padding: 100px 8%;
+
+        }
+
+        .section-title {
+
+            text-align: center;
+
+            font-size: 35px;
+
+            margin-bottom: 15px;
+
+        }
+
+        .section-title span {
+
+            color: var(--main);
+
+        }
+
+        .section-subtitle {
+
+            text-align: center;
+
+            color: var(--text);
+
+            font-size: 14px;
+
+            margin-bottom: 50px;
+
+        }
+
+        .about-grid {
+
+            max-width: 1050px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1.5fr;
+
+            gap: 45px;
+
+            align-items: center;
+
+        }
+
+        .about-image {
+
+            height: 350px;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            border: 2px solid rgba(56,189,248,0.5);
+
+        }
+
+        .about-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+        }
+
+        .about-text h3 {
+
+            font-size: 25px;
+
+            margin-bottom: 15px;
+
+        }
+
+        .about-text p {
+
+            color: var(--text);
+
+            line-height: 1.9;
+
+            font-size: 14px;
+
+            margin-bottom: 18px;
+
+        }
+
+        .info-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 15px;
+
+            margin-top: 25px;
+
+        }
+
+        .info-item {
+
+            padding: 15px;
+
+            background: var(--card);
+
+            border-radius: 10px;
+
+            border-left: 3px solid var(--main);
+
+            font-size: 13px;
+
+        }
+
+        .info-item strong {
+
+            color: var(--main);
+
+        }
+
+        .skills-section,
+
+        .achievements-section {
+
+            background: #0e1729;
+
+        }
+
+        .card-grid {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 22px;
+
+        }
+
+        .card {
+
+            background: var(--card);
+
+            padding: 30px 25px;
+
+            border-radius: 15px;
+
+            border: 1px solid rgba(255,255,255,0.06);
+
+            transition: 0.3s;
+
+        }
+
+        .card:hover {
+
+            transform: translateY(-8px);
+
+            border-color: var(--main);
+
+        }
+
+        .card-icon {
+
+            font-size: 35px;
+
+            margin-bottom: 18px;
+
+        }
+
+        .card h3 {
+
+            font-size: 18px;
+
+            margin-bottom: 12px;
+
+        }
+
+        .card p {
+
+            color: var(--text);
+
+            line-height: 1.8;
+
+            font-size: 13px;
+
+        }
+
+        .skill-bar {
+
+            height: 7px;
+
+            background: #253149;
+
+            border-radius: 10px;
+
+            margin-top: 18px;
+
+            overflow: hidden;
+
+        }
+
+        .skill-level {
+
+            height: 100%;
+
+            background: linear-gradient(90deg, var(--main), var(--secondary));
+
+            border-radius: 10px;
+
+        }
+
+        .project-card {
+
+            padding: 0;
+
+            overflow: hidden;
+
+        }
+
+        .project-card img {
+
+            width: 100%;
+
+            height: 190px;
+
+            object-fit: cover;
+
+            display: block;
+
+        }
+
+        .project-info {
+
+            padding: 23px;
+
+        }
+
+        .project-info h3 {
+
+            color: var(--main);
+
+        }
+
+        .contact-box {
+
+            max-width: 700px;
+
+            margin: auto;
+
+            padding: 40px;
+
+            border-radius: 18px;
+
+            background: var(--card);
+
+            border: 1px solid rgba(56,189,248,0.2);
+
+            text-align: center;
+
+        }
+
+        .contact-box p {
+
+            color: var(--text);
+
+            line-height: 2.5;
+
+            font-size: 14px;
+
+        }
+
+        .contact-box strong {
+
+            color: var(--main);
+
+        }
+
+        footer {
+
+            text-align: center;
+
+            padding: 25px;
+
+            background: #070c17;
+
+            color: #94a3b8;
+
+            font-size: 12px;
+
+        }
+
+        @media (max-width: 900px) {
+
+            nav {
+
+                flex-direction: column;
+
+                gap: 15px;
+
+            }
+
+            nav ul {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 15px;
+
+            }
+
+            .hero {
+
+                flex-direction: column-reverse;
+
+                text-align: center;
+
+                padding-top: 170px;
+
+            }
+
+            .hero p {
+
+                margin-left: auto;
+
+                margin-right: auto;
+
+            }
+
+            .buttons {
+
+                justify-content: center;
+
+            }
+
+            .hero-image {
+
+                flex: auto;
+
+            }
+
+            .about-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .about-image {
+
+                max-width: 350px;
+
+                width: 100%;
+
+                margin: auto;
+
+            }
+
+            .card-grid {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            nav ul {
+
+                gap: 10px;
+
+            }
+
+            nav a {
+
+                font-size: 11px;
+
+            }
+
+            .hero-image {
+
+                width: 100%;
+
+            }
+
+            .image-frame {
+
+                width: 260px;
+
+                height: 320px;
+
+            }
+
+            .card-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .info-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .section-title {
+
+                font-size: 29px;
+
+            }
+
+            section.content-section {
+
+                padding: 75px 6%;
+
+            }
+
+            .contact-box {
+
+                padding: 25px 15px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+    <nav>
+
+        <div class="logo">JSP.</div>
+
+        <ul>
+
+            <li><a href="#home">Home</a></li>
+
+            <li><a href="#about">About</a></li>
+
+            <li><a href="#skills">Skills</a></li>
+
+            <li><a href="#projects">Projects</a></li>
+
+            <li><a href="#achievements">Achievements</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<section class="hero" id="home">
+
+    <div class="hero-text">
+
+        <div class="tag">WELCOME TO MY PORTFOLIO</div>
+
+        <h1>Hi, I'm <span>Jeremy Solis Pillora</span></h1>
+
+        <h2>Student & Future Web Developer</h2>
+
+        <p>
+
+            Welcome to my personal portfolio! This website introduces who I am,
+
+            showcases my skills and projects, and shares my achievements and
+
+            future goals. I am passionate about learning and improving myself.
+
+        </p>
+
+        <div class="buttons">
+
+            <a href="#about" class="btn">About Me</a>
+
+            <a href="#projects" class="btn btn-outline">View My Projects</a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-image">
+
+        <div class="image-frame">
+
+            <img src="Jeremy.png"
+
+                 alt="Profile portrait">
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="content-section" id="about">
+
+    <h2 class="section-title">About <span>Me</span></h2>
+
+    <p class="section-subtitle">Get to know me better</p>
+
+    <div class="about-grid">
+
+        <div class="about-image">
+
+            <img src="jp.jpeg"
+
+                 alt="Portrait">
+
+        </div>
+
+        <div class="about-text">
+
+            <h3>I'm Jeremy Pillora</h3>
+
+            <p>
+
+                I am a student who enjoys learning new things and developing
+
+                new skills. I am interested in technology, creativity, and
+
+                discovering how websites are designed and developed.
+
+            </p>
+
+            <p>
+
+                My goal is to complete my education, gain more knowledge,
+
+                and become a skilled professional in the future.
+
+            </p>
+
+            <div class="info-grid">
+
+                <div class="info-item"><strong>Name:</strong><br>Jeremy Solis Pillora</div>
+
+                <div class="info-item"><strong>Occupation:</strong><br>Student</div>
+
+                <div class="info-item"><strong>Interest:</strong><br>Technology</div>
+
+                <div class="info-item"><strong>Goal:</strong><br>Future Web Developer</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="content-section skills-section" id="skills">
+
+    <h2 class="section-title">My <span>Skills</span></h2>
+
+    <p class="section-subtitle">Skills I am learning and improving</p>
+
+    <div class="card-grid">
+
+        <div class="card">
+
+            <div class="card-icon">💻</div>
+
+            <h3>HTML</h3>
+
+            <p>Building the structure and content of websites.</p>
+
+            <div class="skill-bar"><div class="skill-level" style="width: 75%"></div></div>
+
+        </div>
+
+        <div class="card">
+
+            <div class="card-icon">🎨</div>
+
+            <h3>CSS</h3>
+
+            <p>Creating attractive layouts, colors, and website designs.</p>
+
+            <div class="skill-bar"><div class="skill-level" style="width: 65%"></div></div>
+
+        </div>
+
+        <div class="card">
+
+            <div class="card-icon">🧠</div>
+
+            <h3>Problem Solving</h3>
+
+            <p>Thinking critically and finding solutions to challenges.</p>
+
+            <div class="skill-bar"><div class="skill-level" style="width: 80%"></div></div>
+
+        </div>
+
+        <div class="card">
+
+            <div class="card-icon">🤝</div>
+
+            <h3>Teamwork</h3>
+
+            <p>Cooperating with others and sharing ideas.</p>
+
+            <div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div>
+
+        </div>
+
+        <div class="card">
+
+            <div class="card-icon">🗣️</div>
+
+            <h3>Communication</h3>
+
+            <p>Expressing ideas and listening to other people.</p>
+
+            <div class="skill-bar"><div class="skill-level" style="width: 80%"></div></div>
+
+        </div>
+
+        <div class="card">
+
+            <div class="card-icon">📚</div>
+
+            <h3>Willingness to Learn</h3>
+
+            <p>Continuously gaining knowledge and improving abilities.</p>
+
+            <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="content-section" id="projects">
+
+    <h2 class="section-title">My <span>Projects</span></h2>
+
+    <p class="section-subtitle">Some projects and activities I have worked on</p>
+
+    <div class="card-grid">
+
+        <div class="card project-card">
+
+            <img src="r.jpeg"
+
+                 alt="Computer programming">
+
+            <div class="project-info">
+
+                <h3>Personal Portfolio</h3>
+
+                <p>A personal website introducing my background, skills, and goals using HTML and CSS.</p>
+
+            </div>
+
+        </div>
+
+        <div class="card project-card">
+
+            <img src="e.jpeg"
+
+                 alt="Student working on a project">
+
+            <div class="project-info">
+
+                <h3>School Activities</h3>
+
+                <p>Academic activities and projects that help improve my knowledge and creativity.</p>
+
+            </div>
+
+        </div>
+
+        <div class="card project-card">
+
+            <img src="j.jpeg"
+
+                 alt="Web development workspace">
+
+            <div class="project-info">
+
+                <h3>Future Projects</h3>
+
+                <p>More creative websites and technology projects that I plan to develop in the future.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="content-section achievements-section" id="achievements">
+
+    <h2 class="section-title">Achievements <span>& Goals</span></h2>
+
+    <p class="section-subtitle">My accomplishments and plans for the future</p>
+
+    <div class="card-grid">
+
+        <div class="card">
+
+            <div class="card-icon">🏆</div>
+
+            <h3>Achievements</h3>
+
+            <p>Add your awards, certificates, school accomplishments, and completed projects here.</p>
+
+        </div>
+
+        <div class="card">
+
+            <div class="card-icon">🎯</div>
+
+            <h3>Short-Term Goals</h3>
+
+            <p>Improve my academic performance, learn new skills, and complete my school projects.</p>
+
+        </div>
+
+        <div class="card">
+
+            <div class="card-icon">🚀</div>
+
+            <h3>Long-Term Goals</h3>
+
+            <p>Graduate, build a successful career, and use my knowledge to create useful projects.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="content-section" id="contact">
+
+    <h2 class="section-title">Contact <span>Me</span></h2>
+
+    <p class="section-subtitle">Feel free to connect with me</p>
+
+    <div class="contact-box">
+
+        <p><strong>Name:</strong> Jeremy Solis Pillora</p>
+
+        <p><strong>Email:</strong> pillorajeremy2020@gmail.com</p>
+
+        <p><strong>Facebook:</strong>Jeremy Solis Pillora</p>
+
+        <p><strong>Location:</strong> Philippines</p>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>© 2026 Jeremy Solis Pillora | Personal Portfolio Website</p>
+
+</footer>
+
+</body>
+
+</html>
